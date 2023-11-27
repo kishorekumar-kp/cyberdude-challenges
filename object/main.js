@@ -16,27 +16,28 @@ let mine = {
 
 //create/add
 
-mine.hobbies.splice(1, 0, "refresh");
-console.log(mine.hobbies);
+// mine.hobbies.splice(1, 0, "refresh");
+// console.log(mine.hobbies);
 
-mine.address.pincode = 25000;
-console.log(mine.address);
+// mine.address.pincode = 25000;
+// console.log(mine.address);
 
 //read
 
 // console.log(mine.firstName);
-console.log(mine.isAlive);
+console.log(mine["age"]);
+// console.log(mine.isAlive);
 
 // update
-mine.address.city = "chennai";
-mine.address.country = "india";
+// mine.address.city = "chennai";
+// mine.address.country = "india";
 
-console.log(mine.address);
+// console.log(mine.address);
 
 //delete
-delete mine.address.pincode;
+// delete mine.address.city;
 
-console.log(mine.address);
+// console.log(mine.address);
 
 // emptying object by using  for in loop
 //   for(let i in mine){
@@ -48,4 +49,6 @@ console.log(mine.address);
 // mine = {};
 // console.log(mine);
 
-mine.greet();
+// console.log(mine);
+
+// mine.greet();
