@@ -24,9 +24,9 @@ let mine = {
 
 //read
 
-// console.log(mine.firstName);
-console.log(mine["age"]);
-// console.log(mine.isAlive);
+// console.log("firstname:",mine.firstName);
+// console.log("age:",mine["age"]);
+// console.log("isalive:",mine.isAlive);
 
 // update
 // mine.address.city = "chennai";
@@ -40,7 +40,7 @@ console.log(mine["age"]);
 // console.log(mine.address);
 
 // emptying object by using  for in loop
-//   for(let i in mine){
+//   for(let i  mine){
 //     delete mine[i];
 //   }
 // console.log(mine);
