@@ -1,22 +1,55 @@
-var arr = [ { name: 0}, { name : 1 } , {name : 2 } ];
-var myObj = arr[1];
+// function declarion
 
-arr.splice(arr.indexOf(myObj),1);
+// userData();
+// let  userName = prompt("Enter your name: ");
+// let favPlace = prompt("Enter your Favorite place: ");
+// function userData() {
+    //     console.log(`${userName} your favorite place is ${favPlace}`);
+    // }
+    
 
-console.log(arr);
 
+// function expression
+// let  userName = prompt("Enter your name: ");
+// let favPlace = prompt("Enter your Favorite place: ");
 
-// console.log(dataTypes(array));
-// Output
-// { function: 1, object: 4, number: 3, undefined: 1 }
+// const expression = function(){
+//     return (`${userName} your favorite place is ${favPlace}`);
 
-// Check if obj contains the type or not
-//  if (obj[typeof values]) {
-
-// Increase the type with one
-// obj[typeof val]++;
-// } else {
-
-// Initialize a key (type) into obj
-// obj[typeof values] = 1;
 // }
+// let final =expression();
+
+// console.log(final);
+
+// parameters ,arguments
+
+// function festivalExpense (dress,sweets,crackers,food){
+//     let total = dress +sweets + crackers +food;
+//     console.log("Total festival expenses is:",total);
+
+// }
+
+// festivalExpense(1800,1000,3000,1500);
+
+// parameters ,arguments
+
+// let simpleInterest= (Principle, roi, year) => {
+// let result = (Principle * roi * year) / 100;
+//     return result;
+//   }
+
+//   let result =simpleInterest(20000,12,5);
+//   console.log(result);
+
+// IIFE
+
+// let IIFE = function (){
+//     console.log('Immediately Invoked Function Expressions Trigered ');
+//   }();
+
+
+// let IIFE = ((number1, number2) => {
+//   let result = number1 + number2;
+//   return result;
+// })(20, 70);
+// console.log(IIFE);
