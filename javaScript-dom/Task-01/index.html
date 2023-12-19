@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js-Form</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body class="bg-blue-200 text-gray-700">
+    <main class="m-auto w-1/2">
+      <div class="flex flex-col mt-10">
+        <h1 class="text-3xl font-bold text-gray-700 text-center justify-center">
+          JOB APPLICATION FORM
+        </h1>
+        <img
+          src="https://softbitsolution.com/content/img/job-portal.png"
+          alt="job applying"
+          width="600"
+          class="flex justify-center m-auto mt-2"
+        />
+      </div>
+
+      <!-- form elements -->
+      <form class="mt-7" name="jobApplication">
+        <div class="my-4 flex justify-around">
+          <div class="flex flex-col space-y-2">
+            <label for="firstName">First Name </label>
+            <input
+              class="text-lg text-gray-700 outline-none rounded-lg p-1 px-3"
+              type="text"
+              name="firstName"
+              id="firstName"
+              required
+            />
+          </div>
+          <div class="flex flex-col space-y-2">
+            <label for="lastName">Last Name </label>
+            <input
+              class="text-lg text-gray-700 outline-none rounded-lg p-1 px-3"
+              type="text"
+              name="lastName"
+              id="lastName"
+              required
+            />
+          </div>
+        </div>
+
+        <!-- email & mobile no -->
+
+        <div class="my-4 flex justify-around">
+          <div class="flex flex-col space-y-2">
+            <label for="email">Email ID </label>
+            <input
+              class="text-lg text-gray-700 outline-none rounded-lg p-1 px-3"
+              type="email"
+              name="email"
+              placeholder="jobseeker@mail.com"
+              id="email"
+              required
+            />
+          </div>
+          <div class="flex flex-col space-y-2">
+            <label for="mobileNo">Mobile No</label>
+            <input
+              class="text-lg text-gray-700 outline-none rounded-lg p-1 px-3"
+              type="tel"
+              id="MobileNo"
+              name="mobileNo"
+              placeholder="Enter 10 digit mobile no"
+              maxlength="10"
+              required
+            />
+          </div>
+        </div>
+
+        <!-- gender -->
+        <div class="my-4 flex justify-around">
+          <div class="flex flex-col space-y-2">
+            <label for="jobPosition">Gender</label>
+              <select name="gender" id="jobPosition" required>
+              <option value="">--Gender--</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="others">Others</option>
+            </select>
+          </div>
+          <div class="flex flex-col space-y-2">
+            <label for="date">When you join</label>
+            <input
+              class="text-lg text-gray-700 outline-none rounded-lg p-1 px-3"
+              type="date"
+              name="date"
+              id="date"
+              required
+            />
+          </div>
+        </div>
+
+        <!-- job position-->
+        <div class="my-8 flex justify-around">
+          <div class="">
+            <p>applying for which job position</p>
+            <div class="flex space-x-20">
+              <div class="flex">
+                <input type="radio" name="job" id="frontend" value="frontend" required />
+                <label for="frontend">Frontend developer</label>
+              </div>
+              <div class="flex">
+                <input type="radio" name="job" id="backend" value="backend" />
+                <label for="backend">Backend developer</label>
+              </div>
+              <div class="flex">
+                <input
+                  type="radio"
+                  name="job"
+                  id="dataEngineer"
+                  value="dataEngineer"
+                />
+                <label for="dataEngineer">Data engineer</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- address -->
+
+        <div class="my-4 flex">
+          <div class="flex flex-col space-y-2">
+            <label for="email">Address</label>
+            <input
+              class="text-lg text-gray-700 outline-none rounded-lg p-1 px-3"
+              type="text"
+              name="address1"
+              placeholder="address line 1"
+              id="address"
+              required
+            />
+            <input
+              class="text-lg text-gray-700 outline-none rounded-lg p-1 px-3 w-auto"
+              type="text"
+              name="address2"
+              id="address"
+              placeholder="address line 2"
+              required
+            />
+          </div>
+        </div>
+
+        <!-- cover letter -->
+        <div class="my-4 flex">
+          <div class="flex flex-col space-y-2">
+            <label for="coverLetter" class=""> Cover Letter </label>
+            <textarea rows="6" name="coverLetter" id="coverLetter" class="" required></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="text-xl bg-blue-400 p-1.5 rounded-xl text-white">
+          submit
+        </button>
+      </form>
+      <div id="division">
+
+      </div>
+    </main>
+
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    <!-- <script type="text/javascript" src="assets/js/ruff.js"></script> -->
+  </body>
+</html>
