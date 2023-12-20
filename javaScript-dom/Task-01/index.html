@@ -6,7 +6,7 @@
     <title>Js-Form</title>
     <link rel="stylesheet" href="assets/css/main.css" />
   </head>
-  <body class="bg-blue-200 text-gray-700 flex flex-col" >
+  <body class="bg-blue-200 text-gray-700 flex flex-col relative" >
     <main class="m-auto w-1/2">
       <section class="flex flex-col mt-10">
         <h1 class="text-3xl font-bold text-gray-700 text-center justify-center">
@@ -165,13 +165,14 @@
               rows="6"
               name="coverLetter"
               id="coverLetter"
-              class="outline-none rounded-xl"
+              class="outline-none rounded-xl px-5 py-3"
               required
             ></textarea>
           </div>
         </div>
         <div class="flex justify-center">
           <button
+          id="submit"
             type="submit"
             class="text-xl border border-blue-900 bg-blue-400 p-2 rounded-lg text-white"
           >
@@ -181,9 +182,9 @@
       </form>
     </main>
     <!-- output section -->
-    <section class="w-10/12 bg-gray-700 p-10 my-10 mx-32 text-white">
+    <section id="output" class="hidden">
       <div class="text-2xl px-60 ">
-        <h3 class="text-center text-3xl text-orange-600 pb-2 mb-5">Check your Entered Details</h3>
+        <h3 class="text-center text-3xl text-orange-600 pb-2 mb-5">Check your Entered Details are Correct or Not!</h3>
         <p class="">
           <span>Name : </span> <span id="spanfirstName"></span>&nbsp;<span
             id="spanlastName"
@@ -208,8 +209,8 @@
         <p>Cover letter : <span id="spancoverLetter"></span></p>
       </div>
       <div class="flex justify-center space-x-10 p-5 mt-2">
-        <button class="text-3xl text-white p-2 font-semibold bg-orange-600 rounded-lg ">Yes👍</button>
-        <button class="text-3xl text-white p-2 font-semibold bg-orange-600 rounded-lg ">No👎</button>
+        <button class="text-3xl text-white p-2 font-semibold bg-green-600 rounded-lg greenBtn">Right👍</button>
+        <button class="text-3xl text-white p-2 font-semibold bg-red-600 rounded-lg redBtn">Wrong👎</button>
       </div>
     </section>
 

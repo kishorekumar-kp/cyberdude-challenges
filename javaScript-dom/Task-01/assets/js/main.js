@@ -1,4 +1,8 @@
 const formEl = document.forms.jobApplication;
+const submitBtn = document.querySelector("#submit");
+const outputEl = document.querySelector("#output");
+const rightBtnEl = document.querySelector(".greenBtn");
+const wrongBtnEl = document.querySelector(".redBtn");
 
 formEl.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -16,8 +20,21 @@ formEl.addEventListener("submit", (event) => {
   console.log("form submitted");
 });
 
+submitBtn.addEventListener("click", (event) => {
+  if ((outputEl.classsname = "hidden")) {
+    outputEl.className =
+      "w-10/12  bg-gray-700 p-10 my-10 mx-32 text-white absolute bottom-1";
+  }
+});
 
+wrongBtnEl.addEventListener("click", (event) => {
+  outputEl.className = "hidden";
+});
 
+rightBtnEl.addEventListener("click", (event) => {
+  outputEl.className = "hidden";
+  alert("you have successfully applied a job");
+});
 
 
 
