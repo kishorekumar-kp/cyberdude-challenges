@@ -1,30 +1,70 @@
 const formEl = document.forms.jobApplication;
-let divEl = document.getElementById("division");
 
-const handleSubmit = (event) => {
+formEl.addEventListener("submit", (event) => {
   event.preventDefault();
   const formData = new FormData(formEl);
-
-  // Convert formdata to object
   const jsonData = Object.fromEntries(formData);
   console.log(jsonData);
 
   for (const key in jsonData) {
-    // console.log(`Key: ${key}, Value: ${jsonData[key]}`);
-
-    // create dom element
-    const p = document.createElement("p");
-    p.innerHTML= `<p class = text-2xl text-gray-700  >${key}, ${jsonData[key]}</p>`
-    // const textNode = document.createTextNode(`${key}, ${jsonData[key]}`);
-
-    // Append
-    // p.append(textNode);
-    divEl.prepend(p);
+    const element = document.getElementById("span" + key);
+    if (element) {
+      element.innerText = jsonData[key];
+    }
   }
 
-  // jsonData.name;
-
   console.log("form submitted");
-};
+});
 
-formEl.addEventListener("submit", handleSubmit);
+
+
+
+
+
+
+
+
+// old try
+
+// const formEl = document.forms.jobApplication;
+// let divEl = document.getElementById("division");
+// let nameEl = document.getElementById("spanName");
+// let emailEl = document.getElementById("spanEmail");
+// let mobileEl = document.getElementById("spanMobile");
+// let genderEl = document.getElementById("spanGender");
+// let dateEl = document.getElementById("spanDate");
+// let jobEl = document.getElementById("spanJob");
+// let addressEl = document.getElementById("spanAddress");
+// let coverEl = document.getElementById("spanCover");
+
+// const handleSubmit = (event) => {
+//   event.preventDefault();
+//   const formData = new FormData(formEl);
+
+//   // Convert formdata to object
+//   const jsonData = Object.fromEntries(formData);
+//   console.log(jsonData);
+
+//   nameEl.innerText = jsonData.firstName + " " + jsonData.lastName;
+//   emailEl.innerText = jsonData.email;
+//   mobileEl.innerText = jsonData.mobileNo;
+//   genderEl.innerText = jsonData.gender;
+//   dateEl.innerText = jsonData.date;
+//   jobEl.innerText = jsonData.job;
+//   addressEl.innerText = jsonData.address1 + " " + jsonData.address2;
+//   coverEl.innerText = jsonData.coverLetter;
+
+//   // let value = [];
+//   // value.push(jsonData[key]);
+//   // console.log(value);
+//   // for (const key in jsonData) {
+//   //   console.log(`${key.length}, ${jsonData[key]}`);
+
+//   // }
+
+//   // jsonData.name;
+
+//   console.log("form submitted");
+// };
+
+// formEl.addEventListener("submit", handleSubmit);

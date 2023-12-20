@@ -6,9 +6,9 @@
     <title>Js-Form</title>
     <link rel="stylesheet" href="assets/css/main.css" />
   </head>
-  <body class="bg-blue-200 text-gray-700">
+  <body class="bg-blue-200 text-gray-700 flex flex-col" >
     <main class="m-auto w-1/2">
-      <div class="flex flex-col mt-10">
+      <section class="flex flex-col mt-10">
         <h1 class="text-3xl font-bold text-gray-700 text-center justify-center">
           JOB APPLICATION FORM
         </h1>
@@ -18,10 +18,10 @@
           width="600"
           class="flex justify-center m-auto mt-2"
         />
-      </div>
+      </section>
 
       <!-- form elements -->
-      <form class=" mt-7 mx-10 p-5 text-lg" name="jobApplication">
+      <form class="mt-7 mx-10 p-5 text-lg" name="jobApplication">
         <div class="my-4 px-10 flex justify-between">
           <div class="flex flex-col space-y-2">
             <label for="firstName">First Name </label>
@@ -75,9 +75,14 @@
 
         <!-- gender -->
         <div class="my-4 px-10 flex justify-between">
-          <div class="flex flex-col space-y-2 ">
+          <div class="flex flex-col space-y-2">
             <label for="jobPosition">Gender</label>
-              <select name="gender" id="jobPosition" required class="p-2 px-5 rounded-xl w-56">
+            <select
+              name="gender"
+              id="jobPosition"
+              required
+              class="p-2 px-5 rounded-xl w-56"
+            >
               <option value="">--Gender--</option>
               <option value="male">Male</option>
               <option value="female">Female</option>
@@ -97,12 +102,18 @@
         </div>
 
         <!-- job position-->
-        <div class="my-8 px-10 flex justify-between ">
+        <div class="my-8 px-10 flex justify-between">
           <div class="space-y-3">
             <p>Applying for which job position</p>
             <div class="flex space-x-7">
               <div class="flex">
-                <input type="radio" name="job" id="frontend" value="frontend" required />
+                <input
+                  type="radio"
+                  name="job"
+                  id="frontend"
+                  value="frontend"
+                  required
+                />
                 <label for="frontend">Frontend developer</label>
               </div>
               <div class="flex">
@@ -124,11 +135,11 @@
 
         <!-- address -->
 
-        <div class="my-4 px-10  ">
-          <div class=" flex flex-col space-y-2">
+        <div class="my-4 px-10">
+          <div class="flex flex-col space-y-2">
             <label for="address">Address</label>
             <input
-              class=" text-gray-700 outline-none rounded-lg  px-3 h-14"
+              class="text-gray-700 outline-none rounded-lg px-3 h-14"
               type="text"
               name="address1"
               placeholder="address line 1"
@@ -136,7 +147,7 @@
               required
             />
             <input
-              class=" text-gray-700 outline-none rounded-lg  px-3 h-14"
+              class="text-gray-700 outline-none rounded-lg px-3 h-14"
               type="text"
               name="address2"
               placeholder="address line 2"
@@ -150,21 +161,57 @@
         <div class="my-4 px-10">
           <div class="flex flex-col space-y-2">
             <label for="coverLetter" class=""> Cover Letter </label>
-            <textarea rows="6" name="coverLetter" id="coverLetter" class="outline-none rounded-xl" required></textarea>
+            <textarea
+              rows="6"
+              name="coverLetter"
+              id="coverLetter"
+              class="outline-none rounded-xl"
+              required
+            ></textarea>
           </div>
         </div>
         <div class="flex justify-center">
-          <button type="submit" class="text-xl border border-blue-900 bg-blue-400 p-2 rounded-lg text-white">
+          <button
+            type="submit"
+            class="text-xl border border-blue-900 bg-blue-400 p-2 rounded-lg text-white"
+          >
             submit
           </button>
         </div>
-
-        
       </form>
-      <div id="division">
-
-      </div>
     </main>
+    <!-- output section -->
+    <section class="w-10/12 bg-gray-700 p-10 my-10 mx-32 text-white">
+      <div class="text-2xl px-60 ">
+        <h3 class="text-center text-3xl text-orange-600 pb-2 mb-5">Check your Entered Details</h3>
+        <p class="">
+          <span>Name : </span> <span id="spanfirstName"></span>&nbsp;<span
+            id="spanlastName"
+          ></span>
+        </p>
+        <br />
+        <p>Email Id : <span id="spanemail"></span></p>
+        <br />
+        <p>Mobile No : <span id="spanmobileNo"></span></p>
+        <br />
+        <p>Gender : <span id="spangender"></span></p>
+        <br />
+        <p>Date of Joining : <span id="spandate"></span></p>
+        <br />
+        <p>Job Position : <span id="spanjob"></span></p>
+        <br />
+        <p>
+          Address : <span id="spanaddress1"></span>
+          <span id="spanaddress2"></span>
+        </p>
+        <br />
+        <p>Cover letter : <span id="spancoverLetter"></span></p>
+      </div>
+      <div class="flex justify-center space-x-10 p-5 mt-2">
+        <button class="text-3xl text-white p-2 font-semibold bg-orange-600 rounded-lg ">Yes👍</button>
+        <button class="text-3xl text-white p-2 font-semibold bg-orange-600 rounded-lg ">No👎</button>
+      </div>
+    </section>
 
     <script type="text/javascript" src="assets/js/main.js"></script>
     <!-- <script type="text/javascript" src="assets/js/ruff.js"></script> -->
