@@ -1,5 +1,5 @@
-# Project Title 
-[form -get data from user]
+#   Form -validation
+[]
 ## Table of Contents
 - [Project Title](#project-title)
 - [Description](#description)
@@ -16,9 +16,12 @@
 <img src="assets/img/snip.png"/>
 
 </a>
+
 ## Internship
 This internship is provided by [CyberDude Networks Pvt. Ltd.](https://youtube.com/cyberdudenetworks) as part of the 6-Month Free Internship program, a skill development initiative organized to enhance participants' skills. Mentoring was provided by [Mr. Anbuselvan Rocky](https://instagram.com/anbuselvanrocky). For more information, [you can contact CyberDude Networks here](https://cyberdudenetworks.com).
+
 ## Technologies Used 
+
 <ol>
 <li>HTML</li>
 <li>TailwindCSS</li>
@@ -28,7 +31,7 @@ This internship is provided by [CyberDude Networks Pvt. Ltd.](https://youtube.co
 
 
 Thanks to 
-[khaja sherif](https://github.com/sharif-22)
+[khaja sherif](https://github.com/sharif-22)  and
 [vasanthkumar](https://github.com/Vk2401)
 
 ---
