@@ -3,6 +3,10 @@ const submitBtn = document.querySelector("#submit");
 const outputEl = document.querySelector("#output");
 const rightBtnEl = document.querySelector(".greenBtn");
 const wrongBtnEl = document.querySelector(".redBtn");
+// const firstNameformEl = document.querySelector("#firstName");
+const firstNameEl = document.querySelector("#spanfirstName")
+const mainEl = document.querySelector("main")
+
 
 formEl.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -20,27 +24,32 @@ formEl.addEventListener("submit", (event) => {
   console.log("form submitted");
 });
 
+
+
+
 submitBtn.addEventListener("click", (event) => {
-  if ((outputEl.classsname = "hidden")) {
-    outputEl.className ="w-10/12  bg-gray-700 p-10 my-10 mx-32 text-white absolute bottom-1";
-  }
+  console.log("clicked");
+
+  outputEl.className =
+    " w-10/12  bg-gray-700 p-10 my-10 mx-32 text-white  bottom-1 ";
+    formEl.className = "hidden"
+  console.log(outputEl.className);
+  // if (firstNameEl.innerText == "") {
+  //   outputEl.className = "hidden";
+  // }
+
 });
 
 wrongBtnEl.addEventListener("click", (event) => {
   outputEl.className = "hidden";
+  formEl.className= "mt-7 mx-10 p-5 text-lg"
 });
 
 rightBtnEl.addEventListener("click", (event) => {
   outputEl.className = "hidden";
+  formEl.className= "mt-7 mx-10 p-5 text-lg"
   alert("you have successfully applied a job");
 });
-
-
-
-
-
-
-
 
 // old try
 

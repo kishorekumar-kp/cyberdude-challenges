@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://kishorekumar-kp.github.io/cyberdude-challenges/javaScript-dom/Task-01/dist/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
