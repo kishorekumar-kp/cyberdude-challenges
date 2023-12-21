@@ -22,8 +22,7 @@ formEl.addEventListener("submit", (event) => {
 
 submitBtn.addEventListener("click", (event) => {
   if ((outputEl.classsname = "hidden")) {
-    outputEl.className =
-      "w-10/12  bg-gray-700 p-10 my-10 mx-32 text-white absolute bottom-1";
+    outputEl.className ="w-10/12  bg-gray-700 p-10 my-10 mx-32 text-white absolute bottom-1";
   }
 });
 
@@ -35,6 +34,8 @@ rightBtnEl.addEventListener("click", (event) => {
   outputEl.className = "hidden";
   alert("you have successfully applied a job");
 });
+
+
 
 
 
