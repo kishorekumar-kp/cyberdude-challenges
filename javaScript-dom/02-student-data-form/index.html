@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student application form</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body class="bg-black">
+    <h4 class="font-bold text-3xl mt-10 text-white text-center">
+      Engineering College Application Form
+    </h4>
+    <section
+      class="bg-gradient max-w-xl mx-auto mt-5 p-7 border-2 border-violet-700"
+    >
+      <form class="space-y-7 my-5" id="pickupForm">
+        <div class="my-5 grid grid-cols-2 gap-x-3">
+          <div class="space-y-2">
+            <label for="name" class="text-white">Enter your full name :</label>
+            <input
+              type="text"
+              class="form-input"
+              placeholder="Name"
+              name="name"
+              id="name"
+              required
+            />
+          </div>
+          <div class="space-y-2">
+            <label for="date" class="text-white">Enter your DOB :</label>
+            <input
+              type="date"
+              id="date"
+              class="form-input"
+              placeholder="Date of Birth"
+              name="date"
+              required
+            />
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-x-3">
+          <div class="space-y-2">
+            <label for="gender" class="text-white">Select a gender :</label>
+            <select name="gender" id="gender" required class="form-input">
+              <option value="" class="bg-gray-700">-- Gender --</option>
+              <option value="male" class="bg-gray-700">Male</option>
+              <option value="female" class="bg-gray-700">Female</option>
+              <option value="others" class="bg-gray-700">Others</option>
+            </select>
+          </div>
+          <div class="space-y-2">
+            <label for="number" class="text-white">Enter your mobile No :</label>
+            <input
+              type="number"
+              id="number"
+              name="number"
+              class="form-input"
+              min="0"
+              placeholder="Mobile no"
+              required
+            />
+          </div>
+        </div>
+        <div class="space-y-2">
+          <label for="email" class="text-white">Enter your email address :</label>
+          <input
+            type="email"
+            id="email"
+            class="form-input"
+            placeholder="Enter your Email ID "
+            name="date"
+            required
+          />
+        </div>
+        <div class="space-y-2">
+          <label for="department" class="text-white">Select a engineengring department :</label>
+          <select name="department" id="department" required class="form-input">
+            <option value="" class="bg-gray-700">
+              -- Which Department in Engineering --
+            </option>
+            <option value="Aeronautical" class="bg-gray-700">
+              Aeronautical Engineering
+            </option>
+            <option value="ComputerScience" class="bg-gray-700">
+              Computer Science Engineengring
+            </option>
+            <option value="Civil" class="bg-gray-700">
+              Civil Engineengring
+            </option>
+            <option value="Electrical and Electronis" class="bg-gray-700">
+              Electrical and Electronis Engineengring
+            </option>
+            <option value="Mechanical" class="bg-gray-700">
+              Mechanical Engineengring
+            </option>
+          </select>
+        </div>
+        <div>
+          <button class="bg-slate-300 rounded p-2 w-full hover:bg-white">
+            Submit
+          </button>
+        </div>
+      </form>
+    </section>
+    
+    <script type="module" src="assets/js/main.js"></script>
+  </body>
+</html>

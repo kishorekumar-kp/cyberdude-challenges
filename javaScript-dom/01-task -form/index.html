@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Js-Form</title>
+    <title>Job-Application-Form</title>
     <link rel="stylesheet" href="assets/css/main.css" />
   </head>
   <body class="bg-blue-200 text-gray-700 flex flex-col relative" >
@@ -21,7 +21,7 @@
       </section>
 
       <!-- form elements -->
-      <form class="mt-7 mx-10 p-5 text-lg" name="jobApplication">
+      <form class="form" name="jobApplication">
         <div class="my-4 px-10 flex justify-between">
           <div class="flex flex-col space-y-2">
             <label for="firstName">First Name </label>
@@ -30,6 +30,7 @@
               type="text"
               name="firstName"
               id="firstName"
+              placeholder="Enter your firstname"
               required
             />
           </div>
@@ -39,6 +40,7 @@
               class="text-lg text-gray-700 outline-none rounded-lg p-1 px-3"
               type="text"
               name="lastName"
+              placeholder="Enter your lastname"
               id="lastName"
               required
             />
@@ -105,7 +107,7 @@
         <div class="my-8 px-10 flex justify-between">
           <div class="space-y-3">
             <p>Applying for which job position</p>
-            <div class="flex space-x-7">
+            <div class="flex space-x-5">
               <div class="flex">
                 <input
                   type="radio"
@@ -113,12 +115,13 @@
                   id="frontend"
                   value="frontend"
                   required
+                  class="mr-1"
                 />
-                <label for="frontend">Frontend developer</label>
+                <label for="frontend" class="px-0.5" >Frontend developer</label>
               </div>
               <div class="flex">
-                <input type="radio" name="job" id="backend" value="backend" />
-                <label for="backend">Backend developer</label>
+                <input type="radio" name="job" id="backend" value="backend" class="mr-1" />
+                <label for="backend" class="px-0.5">Backend developer</label>
               </div>
               <div class="flex">
                 <input
@@ -126,8 +129,10 @@
                   name="job"
                   id="dataEngineer"
                   value="dataEngineer"
+                  class="mr-1"
+                  
                 />
-                <label for="dataEngineer">Data engineer</label>
+                <label for="dataEngineer" class="px-0.5" >Data engineer</label>
               </div>
             </div>
           </div>
@@ -136,13 +141,13 @@
         <!-- address -->
 
         <div class="my-4 px-10">
-          <div class="flex flex-col space-y-2">
-            <label for="address">Address</label>
+          <label for="address">Address</label>
+          <div class="grid grid-cols-3 gap-x-4 ">  <!--flex flex-col space-y-2 -->
             <input
               class="text-gray-700 outline-none rounded-lg px-3 h-14"
               type="text"
               name="address1"
-              placeholder="address line 1"
+              placeholder="enter your city"
               id="address"
               required
             />
@@ -150,7 +155,15 @@
               class="text-gray-700 outline-none rounded-lg px-3 h-14"
               type="text"
               name="address2"
-              placeholder="address line 2"
+              placeholder="enter your state"
+              id="address"
+              required
+            />
+            <input
+              class="text-gray-700 outline-none rounded-lg px-3 h-14"
+              type="text"
+              name="address2"
+              placeholder="enter your country"
               id="address"
               required
             />

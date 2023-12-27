@@ -7,9 +7,12 @@ const wrongBtnEl = document.querySelector(".redBtn");
 formEl.addEventListener("submit", (event) => {
   event.preventDefault();
   const formData = new FormData(formEl);
+
+  // Convert formdata to object
   const jsonData = Object.fromEntries(formData);
   console.log(jsonData);
 
+  // getting all p tag > span elements
   for (const key in jsonData) {
     const element = document.getElementById("span" + key);
     if (element) {
@@ -17,21 +20,23 @@ formEl.addEventListener("submit", (event) => {
     }
   }
 
-  outputEl.className =
-    " w-10/12  bg-gray-700 p-10 my-10 mx-32 text-white  bottom-1 ";
+  outputEl.className = " display-output ";
   formEl.className = "hidden";
 
   console.log("form submitted");
 });
-
-wrongBtnEl.addEventListener("click", (event) => {
+ 
+// worng button event
+wrongBtnEl.addEventListener("click", () => {
   outputEl.className = "hidden";
-  formEl.className = "mt-7 mx-10 p-5 text-lg";
+  formEl.className = "form";
 });
 
-rightBtnEl.addEventListener("click", (event) => {
+
+// right button event 
+rightBtnEl.addEventListener("click", () => {
   outputEl.className = "hidden";
-  formEl.className = "mt-7 mx-10 p-5 text-lg";
+  formEl.className = "form";
   formEl.reset();
   alert("You have successfully applied a job");
 });

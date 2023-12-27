@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.display-output{
+    @apply w-10/12  bg-gray-700 p-10 my-10 mx-32 text-white  bottom-1
+}
+
+.form{
+    @apply mt-7 mx-10 p-5 text-lg
+}
