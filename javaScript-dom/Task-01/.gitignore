@@ -11,6 +11,7 @@ node_modules
 dist-ssr
 ruff.js
 *.local
+.vscode
 
 # Editor directories and files
 .vscode/*
