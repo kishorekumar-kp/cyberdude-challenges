@@ -1,10 +1,12 @@
 import JustValidate from "just-validate";
 
-const formEl = document.getElementById("pickupForm");
+const formEl = document.getElementById("studentForm");
 
-const validator = new JustValidate(formEl);
+const studentValidate = new JustValidate(formEl, {
+  validateBeforeSubmitting: true,
+});
 
-validator.addField(
+studentValidate.addField(
   "#name",
   [
     {
@@ -24,7 +26,7 @@ validator.addField(
   }
 );
 
-validator.addField(
+studentValidate.addField(
   "#number",
   [
     {
@@ -47,7 +49,7 @@ validator.addField(
   }
 );
 
-validator.addField(
+studentValidate.addField(
   "#date",
   [
     {
@@ -59,7 +61,7 @@ validator.addField(
   }
 );
 
-validator.addField(
+studentValidate.addField(
   "#email",
   [
     {
@@ -71,7 +73,7 @@ validator.addField(
   }
 );
 
-validator.addField(
+studentValidate.addField(
   "#gender",
   [
     {
@@ -83,7 +85,7 @@ validator.addField(
   }
 );
 
-validator.addField(
+studentValidate.addField(
   "#department",
   [
     {
@@ -94,3 +96,35 @@ validator.addField(
     errorLabelCssClass: ["error"],
   }
 );
+
+studentValidate.onSuccess((event) => {
+  const formData = new FormData(formEl);
+
+  const formDataObj = Object.fromEntries(formData);
+  
+  const existingStudentData = localStorage.getItem("studentData");
+  
+  if (existingStudentData) {
+    const studentArray = JSON.parse(existingStudentData);
+    studentArray.push(formDataObj);
+    localStorage.setItem("studentData", JSON.stringify(studentArray));
+    formEl.reset();
+  } else {
+    const studentAllData = [];
+    studentAllData.push(formDataObj);
+    localStorage.setItem("studentData", JSON.stringify(studentAllData));
+    formEl.reset();
+  }
+  
+  getAllStudenData();
+});
+
+function getAllStudenData(){
+  const allStudentData = localStorage.getItem("studentData");
+
+  const getAllStudenDataArr = JSON.parse(allStudentData);
+
+  console.log(getAllStudenDataArr);
+}
+
+

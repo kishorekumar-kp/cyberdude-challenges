@@ -8,12 +8,12 @@
   </head>
   <body class="bg-black">
     <h4 class="font-bold text-3xl mt-10 text-white text-center">
-      Engineering College Application Form
+      Engineering College Student Application Form
     </h4>
     <section
       class="bg-gradient max-w-xl mx-auto mt-5 p-7 border-2 border-violet-700"
     >
-      <form class="space-y-7 my-5" id="pickupForm">
+      <form class="space-y-7 my-5" id="studentForm" method="post">
         <div class="my-5 grid grid-cols-2 gap-x-3">
           <div class="space-y-2">
             <label for="name" class="text-white">Enter your full name :</label>
@@ -49,31 +49,39 @@
             </select>
           </div>
           <div class="space-y-2">
-            <label for="number" class="text-white">Enter your mobile No :</label>
+            <label for="number" class="text-white"
+              >Enter your mobile No :</label
+            >
             <input
               type="number"
               id="number"
               name="number"
               class="form-input"
               min="0"
+              maxlength="10"
               placeholder="Mobile no"
               required
+              value="7894561230"
             />
           </div>
         </div>
         <div class="space-y-2">
-          <label for="email" class="text-white">Enter your email address :</label>
+          <label for="email" class="text-white"
+            >Enter your email address :</label
+          >
           <input
             type="email"
             id="email"
             class="form-input"
             placeholder="Enter your Email ID "
-            name="date"
+            name="email"
             required
           />
         </div>
         <div class="space-y-2">
-          <label for="department" class="text-white">Select a engineengring department :</label>
+          <label for="department" class="text-white"
+            >Select a engineering department :</label
+          >
           <select name="department" id="department" required class="form-input">
             <option value="" class="bg-gray-700">
               -- Which Department in Engineering --
@@ -81,28 +89,144 @@
             <option value="Aeronautical" class="bg-gray-700">
               Aeronautical Engineering
             </option>
-            <option value="ComputerScience" class="bg-gray-700">
-              Computer Science Engineengring
+            <option value="Computer Science" class="bg-gray-700">
+              Computer Science Engineering
             </option>
             <option value="Civil" class="bg-gray-700">
-              Civil Engineengring
+              Civil Engineering
             </option>
             <option value="Electrical and Electronis" class="bg-gray-700">
-              Electrical and Electronis Engineengring
+              Electrical and Electronis Engineering
             </option>
             <option value="Mechanical" class="bg-gray-700">
-              Mechanical Engineengring
+              Mechanical Engineering
             </option>
           </select>
         </div>
         <div>
-          <button class="bg-slate-300 rounded p-2 w-full hover:bg-white">
+          <button type="submit" class="bg-slate-300 rounded p-2 w-full hover:bg-white">
             Submit
           </button>
         </div>
       </form>
     </section>
-    
+    <section class="bg-gradient max-w-5xl mx-auto mt-10 p-5">
+      <h4 class="font-bold text-2xl text-white text-center">Students Data</h4>
+
+      <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+        <table
+          class="w-full mt-5 text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
+        >
+          <thead
+            class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+          >
+            <tr class="text-center">
+              <th scope="col" class="px-6 py-3">Student Name</th>
+              <th scope="col" class="px-6 py-3">DoB</th>
+              <th scope="col" class="px-6 py-3">Gender</th>
+              <th scope="col" class="px-6 py-3">Mobile No</th>
+              <th scope="col" class="px-6 py-3">Email Id</th>
+              <th scope="col" class="px-6 py-3">Department</th>
+              <th scope="col" class="px-6 py-3">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-input border-b font-semibold text-sm">
+              <td scope="row" class="text-white px-6 py-4 whitespace-nowrap">
+                kishore
+              </td>
+              <td class="px-6 py-4 text-white">26/11/1998</td>
+              <td class="px-6 py-4 text-white">Male</td>
+              <td class="px-6 py-4 text-white">769633355</td>
+              <td class="px-6 py-4 text-white">kpkishore123@gmail.com</td>
+              <td class="px-6 py-4 text-white">Electrical and Electronis</td>
+              <td class="px-6 py-4 text-right">
+                <!-- <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a> -->
+                <!-- <button
+                  class="bg-red-500 text-gray-100 rounded p-1 w-full hover:bg-red-700"
+                >
+                  Remove
+                </button> -->
+                <div class="flex space-x-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    class="fill-current  text-green-600"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M4 20v-2h2.75l-.4-.35q-1.225-1.225-1.787-2.662T4 12.05q0-2.775 1.663-4.937T10 4.25v2.1Q8.2 7 7.1 8.563T6 12.05q0 1.125.425 2.188T7.75 16.2l.25.25V14h2v6zm10-.25v-2.1q1.8-.65 2.9-2.212T18 11.95q0-1.125-.425-2.187T16.25 7.8L16 7.55V10h-2V4h6v2h-2.75l.4.35q1.225 1.225 1.788 2.663T20 11.95q0 2.775-1.662 4.938T14 19.75"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    class="fill-current  text-red-500"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12l1.41 1.41L13.41 14l2.12 2.12l-1.41 1.41L12 15.41l-2.12 2.12l-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                    />
+                  </svg>
+                </div>
+              </td>
+            </tr>
+            <tr class="bg-input border-b font-semibold text-sm">
+              <td scope="row" class="text-white px-6 py-4 whitespace-nowrap">
+                kishore
+              </td>
+              <td class="px-6 py-4 text-white">26/11/1998</td>
+              <td class="px-6 py-4 text-white">Male</td>
+              <td class="px-6 py-4 text-white">769633355</td>
+              <td class="px-6 py-4 text-white">kpkishore123@gmail.com</td>
+              <td class="px-6 py-4 text-white">Mechanical</td>
+              <td class="px-6 py-4 text-right">
+                <!-- <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a> -->
+                <!-- <button
+                  class="bg-red-500 text-gray-100 rounded p-1 w-full hover:bg-red-700"
+                >
+                  Remove
+                </button> -->
+                <div class="flex space-x-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    class="fill-current  text-green-600"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M4 20v-2h2.75l-.4-.35q-1.225-1.225-1.787-2.662T4 12.05q0-2.775 1.663-4.937T10 4.25v2.1Q8.2 7 7.1 8.563T6 12.05q0 1.125.425 2.188T7.75 16.2l.25.25V14h2v6zm10-.25v-2.1q1.8-.65 2.9-2.212T18 11.95q0-1.125-.425-2.187T16.25 7.8L16 7.55V10h-2V4h6v2h-2.75l.4.35q1.225 1.225 1.788 2.663T20 11.95q0 2.775-1.662 4.938T14 19.75"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    class="fill-current  text-red-500"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12l1.41 1.41L13.41 14l2.12 2.12l-1.41 1.41L12 15.41l-2.12 2.12l-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                    />
+                  </svg>
+                </div>
+              </td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </section>
+
     <script type="module" src="assets/js/main.js"></script>
+    <!-- <script type="module" src="assets/js/ruff.js"></script> -->
+
   </body>
 </html>
