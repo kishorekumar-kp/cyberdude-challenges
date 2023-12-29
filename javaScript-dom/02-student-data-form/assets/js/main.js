@@ -2,6 +2,10 @@ import JustValidate from "just-validate";
 
 const formEl = document.getElementById("studentForm");
 
+const tableBodyEl = document.querySelector("table > tbody");
+
+console.log(tableBodyEl);
+
 const studentValidate = new JustValidate(formEl, {
   validateBeforeSubmitting: true,
 });
@@ -101,9 +105,9 @@ studentValidate.onSuccess((event) => {
   const formData = new FormData(formEl);
 
   const formDataObj = Object.fromEntries(formData);
-  
+
   const existingStudentData = localStorage.getItem("studentData");
-  
+
   if (existingStudentData) {
     const studentArray = JSON.parse(existingStudentData);
     studentArray.push(formDataObj);
@@ -115,16 +119,21 @@ studentValidate.onSuccess((event) => {
     localStorage.setItem("studentData", JSON.stringify(studentAllData));
     formEl.reset();
   }
-  
+
   getAllStudenData();
 });
 
-function getAllStudenData(){
+function getAllStudenData() {
   const allStudentData = localStorage.getItem("studentData");
 
   const getAllStudenDataArr = JSON.parse(allStudentData);
 
   console.log(getAllStudenDataArr);
+
+  const trEl = document.createElement("tr");
+  const tdNameEl = document.createElement("td");
+  const tdNoEl = document.createElement("td");
+  const tdInfoEl = document.createElement("td");
+  const tdIconEl = document.createElement("td");
+  const BtnEl = document.createElement("button");
 }
-
-
