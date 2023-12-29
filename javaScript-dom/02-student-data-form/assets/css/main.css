@@ -19,6 +19,22 @@
     @apply text-sm text-red-500 p-1
 }
 
+
+.td-class{
+    @apply px-6 py-4 text-white
+}
+
+.td-class-btn{
+    @apply bg-violet-400 rounded-lg p-1 text-white
+}
+
+.td4-class{
+    @apply px-6 py-4 flex items-center justify-center
+}
+
+.tr-class{
+    @apply bg-input border-b font-semibold text-sm text-center
+}
 /* ::placeholder{
     @apply text-white
 } */
