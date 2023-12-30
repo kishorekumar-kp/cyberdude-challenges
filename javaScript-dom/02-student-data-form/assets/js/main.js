@@ -1,5 +1,5 @@
 import JustValidate from "just-validate";
-import {v4 as uuidv4} from "uuid";
+import { v4 as uuidv4 } from "uuid";
 
 const formEl = document.getElementById("studentForm");
 
@@ -104,7 +104,7 @@ studentValidate.addField(
 
 studentValidate.onSuccess((event) => {
   const formData = new FormData(formEl);
-  formData.append("id",uuidv4());
+  formData.append("id", uuidv4());
 
   const formDataObj = Object.fromEntries(formData);
 
@@ -121,9 +121,8 @@ studentValidate.onSuccess((event) => {
     localStorage.setItem("studentData", JSON.stringify(studentAllData));
     formEl.reset();
   }
-
-  getAllStudentData();
 });
+getAllStudentData();
 
 function getAllStudentData() {
   const allStudentData = localStorage.getItem("studentData");
@@ -137,7 +136,6 @@ function getAllStudentData() {
 
   if (getAllStudenDataArr && getAllStudenDataArr.length > 0) {
     listSection.classList.remove("hidden");
-
 
     tableBodyEl.innerHTML = "";
 
@@ -169,13 +167,18 @@ function getAllStudentData() {
       tdIconEl.classList.add("td4-class");
       tdIconEl.append(divEl);
 
+      // viewmore fun
+      BtnEl.addEventListener("click", (e) => {
+        viewMoreData(allStudentData);
+      });
+
       // Create a new SVG element
       const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
       svg.setAttribute("width", "32");
       svg.setAttribute("height", "32");
       svg.setAttribute("viewBox", "0 0 24 24");
       svg.setAttribute("class", "fill-current text-red-500 ");
-      svg.classList.add("hover:bg-white")
+      svg.classList.add("hover:bg-white");
 
       // Create a new path element
       const path = document.createElementNS(
@@ -207,12 +210,12 @@ function getAllStudentData() {
     });
 
     console.log(studentFinalData);
-  }else {
+  } else {
     listSection.classList.add("hidden");
-
   }
 }
 
+// delete functionality
 function deleteStudentData(dataReq) {
   const confirmation = confirm(
     `Do you want to delete '${dataReq["name"]}' record?`
@@ -232,4 +235,44 @@ function deleteStudentData(dataReq) {
 
     getAllStudentData();
   }
+}
+
+// view functionality
+
+function viewMoreData(dataview) {
+  const allStudentData = localStorage.getItem("studentData");
+
+  const studentDataObj = JSON.parse(allStudentData);
+
+  const studentViewRecords = studentDataObj.filter(
+    (allDataView) => allDataView.id === dataview["id"]
+  );
+  console.log(studentViewRecords);
+
+//   const obj = {};
+
+// for (let i = 0; i < studentViewRecords.length; i++) {
+//     obj[i] = studentViewRecords[i];
+// }
+
+// console.log(obj);
+  for (const key in studentViewRecords[0]) {
+    const element = document.getElementById("span" + key);
+    // console.log(element);
+    console.log(key);
+    if (element) {
+      element.innerText = studentViewRecords[0][key];
+      console.log(element.id);
+    }
+  }
+
+  // let nameEl = document.getElementById("spanName");
+  // console.log(nameEl.innerText =studentViewRecords[0].name);
+  // let dateEl = document.getElementById("spanDate");
+  // let genderEl = document.getElementById("spanGender");
+  // let mobileEl = document.getElementById("spanNumber");
+  // let emailEl = document.getElementById("spanEmail");
+  // let departmentEl = document.getElementById("spanDepartment");
+
+
 }
