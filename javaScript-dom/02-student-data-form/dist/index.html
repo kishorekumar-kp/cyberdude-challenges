@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/logo-1-G4vv48oS.png" />
+    <title>Student application form</title>
+    <script type="module" crossorigin src="./assets/index--c72tCjz.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-HSPqJjP1.css">
+  </head>
+  <body class="bg-black">
+    <header class="text-white">
+      <ul class="flex p-1 mt-5 justify-end space-x-10 px-10">
+        <li id="home"
+          class="text-lg p-1 text-white cursor-pointer hover:text-violet-500"
+          onclick="console.log('clicked');"
+        >
+          Home
+        </li>
+        <li
+          id="viewExistingdata"
+          class="text-lg p-1 text-white cursor-pointer hover:text-violet-500"
+        >
+          View Student Data
+        </li>
+        <li class="cursor-pointer">
+          <a
+            href="https://github.com/kishorekumar-kp/cyberdude-challenges/tree/main/javaScript-dom/02-student-data-form"
+            target="_blank"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 16 16"
+              class="text-violet-500 hover:text-violet-800"
+            >
+              <path
+                fill="currentColor"
+                d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38c0-.27.01-1.13.01-2.2c0-.75-.25-1.23-.54-1.48c1.78-.2 3.65-.88 3.65-3.95c0-.88-.31-1.59-.82-2.15c.08-.2.36-1.02-.08-2.12c0 0-.67-.22-2.2.82c-.64-.18-1.32-.27-2-.27c-.68 0-1.36.09-2 .27c-1.53-1.03-2.2-.82-2.2-.82c-.44 1.1-.16 1.92-.08 2.12c-.51.56-.82 1.28-.82 2.15c0 3.06 1.86 3.75 3.64 3.95c-.23.2-.44.55-.51 1.07c-.46.21-1.61.55-2.33-.66c-.15-.24-.6-.83-1.23-.82c-.67.01-.27.38.01.53c.34.19.73.9.82 1.13c.16.45.68 1.31 2.69.94c0 .67.01 1.3.01 1.49c0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8"
+              />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </header>
+    <section id="formSection">
+      <h4 class="font-bold text-3xl mt-2 text-white text-center">
+        Engineering College Student Application Form
+      </h4>
+      <div
+        class="bg-gradient max-w-xl mx-auto mt-5 p-7 border-2 border-violet-700"
+      >
+        <form class="space-y-7 my-5" id="studentForm" method="post">
+          <div class="my-5 grid grid-cols-2 gap-x-3">
+            <div class="space-y-2">
+              <label for="name" class="text-white"
+                >Enter your full name :</label
+              >
+              <input
+                type="text"
+                class="form-input"
+                placeholder="Name"
+                name="name"
+                id="name"
+                required
+              />
+            </div>
+            <div class="space-y-2">
+              <label for="date" class="text-white">Enter your DOB :</label>
+              <input
+                type="date"
+                id="date"
+                class="form-input"
+                placeholder="Date of Birth"
+                name="date"
+                required
+              />
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-x-3 ">
+            <div class="space-y-2">
+              <label for="gender" class="text-white">Select a gender :</label>
+              <select name="gender" id="gender" required class="form-input">
+                <option value="" class="bg-gray-700">-- Gender --</option>
+                <option value="male" class="bg-gray-700">Male</option>
+                <option value="female" class="bg-gray-700">Female</option>
+                <option value="others" class="bg-gray-700">Others</option>
+              </select>
+            </div>
+            <div class="space-y-2">
+              <label for="number" class="text-white"
+                >Enter your mobile No :</label
+              >
+              <input
+                type="number"
+                id="number"
+                name="number"
+                class="form-input"
+                min="0"
+                maxlength="10"
+                placeholder="Mobile no"
+                required
+                value="7894561230"
+              />
+            </div>
+          </div>
+          <div class="space-y-2">
+            <label for="email" class="text-white"
+              >Enter your email address :</label
+            >
+            <input
+              type="email"
+              id="email"
+              class="form-input"
+              placeholder="Enter your Email ID "
+              name="email"
+              required
+            />
+          </div>
+          <div class="space-y-2">
+            <label for="department" class="text-white"
+              >Select a engineering department :</label
+            >
+            <select
+              name="department"
+              id="department"
+              required
+              class="form-input"
+            >
+              <option value="" class="bg-gray-700">
+                -- Which Department in Engineering --
+              </option>
+              <option value="Aeronautical" class="bg-gray-700">
+                Aeronautical Engineering
+              </option>
+              <option value="Computer Science" class="bg-gray-700">
+                Computer Science Engineering
+              </option>
+              <option value="Civil" class="bg-gray-700">
+                Civil Engineering
+              </option>
+              <option value="Electrical and Electronis" class="bg-gray-700">
+                Electrical and Electronis Engineering
+              </option>
+              <option value="Mechanical" class="bg-gray-700">
+                Mechanical Engineering
+              </option>
+            </select>
+          </div>
+          <div>
+            <button
+              type="submit"
+              class="bg-slate-300 rounded p-2 w-full hover:bg-white"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section
+      class="bg-gradient max-w-3xl mx-auto mt-10 p-5 border-2 border-violet-700 hidden"
+      id="listSection"
+    >
+      <h4 class="font-bold text-2xl text-white text-center">Students Data</h4>
+
+      <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+        <table
+          class="w-full mt-5 text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
+        >
+          <thead
+            class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+          >
+            <tr class="text-center">
+              <th scope="col" class="px-6 py-3">Student Name</th>
+              <th scope="col" class="px-6 py-3">Mobile No</th>
+              <th scope="col" class="px-6 py-3">MORE INFO</th>
+              <th scope="col" class="px-6 py-3">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- <tr class="bg-input border-b font-semibold text-sm">
+              <td scope="row" class="text-white px-6 py-4 whitespace-nowrap">
+                kishore
+              </td>
+              <td class="px-6 py-4 text-white">26/11/1998</td>
+              <td class="px-6 py-4 text-white">Male</td>
+              <td class="px-6 py-4 text-white">769633355</td>
+              <td class="px-6 py-4 text-white">kpkishore123@gmail.com</td>
+              <td class="px-6 py-4 text-white">Mechanical</td>
+              <td class="px-6 py-4 text-right">
+                <div class="flex space-x-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    class="fill-current  text-green-600"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M4 20v-2h2.75l-.4-.35q-1.225-1.225-1.787-2.662T4 12.05q0-2.775 1.663-4.937T10 4.25v2.1Q8.2 7 7.1 8.563T6 12.05q0 1.125.425 2.188T7.75 16.2l.25.25V14h2v6zm10-.25v-2.1q1.8-.65 2.9-2.212T18 11.95q0-1.125-.425-2.187T16.25 7.8L16 7.55V10h-2V4h6v2h-2.75l.4.35q1.225 1.225 1.788 2.663T20 11.95q0 2.775-1.662 4.938T14 19.75"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    class="fill-current  text-red-500"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12l1.41 1.41L13.41 14l2.12 2.12l-1.41 1.41L12 15.41l-2.12 2.12l-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                    />
+                  </svg>
+                </div>
+              </td>
+            </tr> -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <div
+      id="viewBtnDiv"
+      class="max-w-xl bg-gradient mx-auto text-white mt-10 p-5 space-y-3 hidden"
+    >
+      <p>Student Name : <span id="spanname"></span></p>
+      <p>Student DoB : <span id="spandate"></span></p>
+      <p>Student Gender : <span id="spangender"></span></p>
+      <p>Student Mobile No : <span id="spannumber"></span></p>
+      <p>Student Email Id : <span id="spanemail"></span></p>
+      <p>Student Department : <span id="spandepartment"></span></p>
+    </div>
+
+  </body>
+</html>

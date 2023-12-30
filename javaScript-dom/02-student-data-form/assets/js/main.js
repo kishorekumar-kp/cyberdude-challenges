@@ -1,11 +1,22 @@
 import JustValidate from "just-validate";
 import { v4 as uuidv4 } from "uuid";
 
+
 const formEl = document.getElementById("studentForm");
 
 const tableBodyEl = document.querySelector("table > tbody");
 
-console.log(tableBodyEl);
+const listSection = document.querySelector("#listSection");
+
+const viewBtnDivEl = document.getElementById("viewBtnDiv");
+
+const formSectionEl = document.getElementById("formSection");
+
+const liEl2 = document.querySelector("#viewExistingdata");
+
+const homeEl = document.querySelector("#home");
+
+
 
 const studentValidate = new JustValidate(formEl, {
   validateBeforeSubmitting: true,
@@ -121,8 +132,11 @@ studentValidate.onSuccess((event) => {
     localStorage.setItem("studentData", JSON.stringify(studentAllData));
     formEl.reset();
   }
+  getAllStudentData();
+  
 });
-getAllStudentData();
+
+
 
 function getAllStudentData() {
   const allStudentData = localStorage.getItem("studentData");
@@ -131,11 +145,11 @@ function getAllStudentData() {
 
   console.log(getAllStudenDataArr);
 
-  const listSection = document.querySelector("#listSection");
   console.log(listSection);
 
   if (getAllStudenDataArr && getAllStudenDataArr.length > 0) {
     listSection.classList.remove("hidden");
+    formSectionEl.classList.add("hidden");
 
     tableBodyEl.innerHTML = "";
 
@@ -170,6 +184,7 @@ function getAllStudentData() {
       // viewmore fun
       BtnEl.addEventListener("click", (e) => {
         viewMoreData(allStudentData);
+        showcaseStudentData();
       });
 
       // Create a new SVG element
@@ -198,7 +213,7 @@ function getAllStudentData() {
         deleteStudentData(allStudentData);
       });
 
-      // Append the SVG element to the HTML element with ID "myDiv"
+      // Append the SVG element to the HTML element with div
       divEl.classList.add("flex", "space-x-10");
       divEl.appendChild(svg);
 
@@ -214,6 +229,20 @@ function getAllStudentData() {
     listSection.classList.add("hidden");
   }
 }
+
+// list all student existing data when click in navbar -> ("View Student Data")
+liEl2 .addEventListener("click",()=>{
+  getAllStudentData();
+  viewBtnDivEl.classList.add("hidden");
+});
+
+// home click navigate to form page
+homeEl.addEventListener("click",()=>{
+  formSectionEl.classList.remove("hidden");
+  listSection.classList.add("hidden");
+  viewBtnDivEl.classList.add("hidden");
+
+})
 
 // delete functionality
 function deleteStudentData(dataReq) {
@@ -247,32 +276,39 @@ function viewMoreData(dataview) {
   const studentViewRecords = studentDataObj.filter(
     (allDataView) => allDataView.id === dataview["id"]
   );
-  console.log(studentViewRecords);
+  // console.log(studentViewRecords);
 
-//   const obj = {};
-
-// for (let i = 0; i < studentViewRecords.length; i++) {
-//     obj[i] = studentViewRecords[i];
-// }
-
-// console.log(obj);
+  // get all ements of span
   for (const key in studentViewRecords[0]) {
     const element = document.getElementById("span" + key);
-    // console.log(element);
-    console.log(key);
+    // console.log(key);
     if (element) {
       element.innerText = studentViewRecords[0][key];
-      console.log(element.id);
+      // console.log(element.id);
     }
   }
+//  console.log(studentViewRecords[0].gender);
 
-  // let nameEl = document.getElementById("spanName");
-  // console.log(nameEl.innerText =studentViewRecords[0].name);
-  // let dateEl = document.getElementById("spanDate");
-  // let genderEl = document.getElementById("spanGender");
-  // let mobileEl = document.getElementById("spanNumber");
-  // let emailEl = document.getElementById("spanEmail");
-  // let departmentEl = document.getElementById("spanDepartment");
+ if (studentViewRecords[0].gender === "female"){
+  console.log("female gender is here");
+ }
+ else if(studentViewRecords[0].gender === "male"){
+  console.log("male gender is here");
+ }
+ else if (studentViewRecords[0].gender === "others"){
+  console.log("others gender is here");
+ }
 
 
+
+}
+
+// displaying student data output
+function showcaseStudentData() {
+
+  viewBtnDivEl.classList.remove("hidden");
+
+  listSection.classList.add("hidden");
+
+  formSectionEl.classList.add("hidden");
 }
