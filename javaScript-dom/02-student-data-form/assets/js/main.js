@@ -184,7 +184,6 @@ function getAllStudentData() {
       // viewmore fun
       BtnEl.addEventListener("click", (e) => {
         viewMoreData(allStudentData);
-        showcaseStudentData();
       });
 
       // Create a new SVG element
@@ -247,7 +246,7 @@ homeEl.addEventListener("click",()=>{
 // delete functionality
 function deleteStudentData(dataReq) {
   const confirmation = confirm(
-    `Do you want to delete '${dataReq["name"]}' record?`
+    `Do you want to delete this student '${dataReq["name"]}'?`
   );
 
   if (confirmation) {
@@ -282,33 +281,36 @@ function viewMoreData(dataview) {
   for (const key in studentViewRecords[0]) {
     const element = document.getElementById("span" + key);
     // console.log(key);
+    console.log(studentViewRecords[0][key]);
     if (element) {
       element.innerText = studentViewRecords[0][key];
       // console.log(element.id);
     }
   }
-//  console.log(studentViewRecords[0].gender);
+ console.log(studentViewRecords[0].gender);
+ const imageEl = document.getElementById("image");
 
- if (studentViewRecords[0].gender === "female"){
-  console.log("female gender is here");
+ if (studentViewRecords[0].gender === "Female"){
+  imageEl.setAttribute("src","assets/img/female-avatar.jpg");
  }
- else if(studentViewRecords[0].gender === "male"){
-  console.log("male gender is here");
+ else if(studentViewRecords[0].gender === "Male"){
+  imageEl.setAttribute("src","assets/img/male-avatar.png");
  }
- else if (studentViewRecords[0].gender === "others"){
-  console.log("others gender is here");
+ else if (studentViewRecords[0].gender === "Others"){
+  imageEl.setAttribute("src","assets/img/others-avatar.png");
+  imageEl.setAttribute("width","250")
  }
 
+ viewBtnDivEl.classList.remove("hidden");
 
+ listSection.classList.add("hidden");
+
+ formSectionEl.classList.add("hidden");
 
 }
 
 // displaying student data output
 function showcaseStudentData() {
 
-  viewBtnDivEl.classList.remove("hidden");
-
-  listSection.classList.add("hidden");
-
-  formSectionEl.classList.add("hidden");
+  
 }
