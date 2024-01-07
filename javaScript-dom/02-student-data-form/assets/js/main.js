@@ -226,6 +226,12 @@ function getAllStudentData() {
     console.log(studentFinalData);
   } else {
     listSection.classList.add("hidden");
+    console.log("no data in database");
+    // const nodata = document.getElementById("noData");
+    // nodata.classList.remove("hidden");
+    
+
+    
   }
 }
 
@@ -291,7 +297,9 @@ function viewMoreData(dataview) {
  const imageEl = document.getElementById("image");
 
  if (studentViewRecords[0].gender === "Female"){
-  imageEl.setAttribute("src","assets/img/female-avatar.jpg");
+  // imageEl.setAttribute("src","assets/img/female-avatar.jpg");
+  imageEl.src = "assets/img/female-avatar.jpg";
+  
  }
  else if(studentViewRecords[0].gender === "Male"){
   imageEl.setAttribute("src","assets/img/male-avatar.png");
