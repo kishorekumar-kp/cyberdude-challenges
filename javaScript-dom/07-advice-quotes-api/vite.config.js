@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import { resolve } from "path";
 
 export default defineConfig({
-  base: '/07-advice-quotes-api/'
+  base: '/07-advice-quotes-api/',
   //   build: {
   //     rollupOptions: {
   //       input: {
@@ -10,4 +10,7 @@ export default defineConfig({
   //       },
   //     },
   //   },
+  build: {
+    target: "ES2022", // <--------- ✅✅✅✅✅✅
+  },
 });
