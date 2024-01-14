@@ -5,7 +5,7 @@ const btnEl = document.querySelector("button");
 
 
 btnEl.addEventListener("click", () => {
-  window.location.href = "/";
+  window.location.href = "./index.html";
 });
 
 
