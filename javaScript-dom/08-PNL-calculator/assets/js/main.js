@@ -143,7 +143,7 @@ validateCalculate.onSuccess((event) => {
 
   marginSpanEl.textContent = finalOutput.margin;
   totalMarginSpanEl.textContent = finalOutput.totalMargin;
-  leveragesSanEl.textContent = finalOutput.leverage;
+  leveragesSanEl.textContent = `${finalOutput.leverage}x`;
   quantitySpanEl.textContent = finalOutput.totalQuantity;
   pnlSpanEl.textContent = finalOutput.PNL;
   pnlInput.value = finalOutput.PNL;
@@ -177,9 +177,9 @@ const currenciesNameApi = async () => {
 
 convertBtnEL.addEventListener("click", async () => {
   const ConvertURL = `https://api.frankfurter.app/latest?amount=${pnlInput.value}&from=USD&to=${selectEl.value}`;
-  
+
   if (selectEl.value === "USD" || selectEl.value === "") {
-    alert("Please select a Valide currency");
+    alert("Please select a Valid currency");
     sectionEl.classList.remove("hidden");
     outputEl.classList.add("hidden");
   }
@@ -189,9 +189,9 @@ convertBtnEL.addEventListener("click", async () => {
     const convertCurrency = Object.values(jsonApiData.rates)[0];
     const outputCurrency = Number(convertCurrency.toFixed(2));
     outputEl.innerHTML = `
-    <h1 class="p-5 text-center text-xl font-bold">This is result of your currency covertion</h1>
+    <h1 class="p-5 text-center text-xl font-bold">This is result of your currency convertion</h1>
     <p class="p-5 text-center text-xl font-semibold">${pnlInput.value} USD equal to ${outputCurrency} ${selectEl.value}</p>
-    <button onclick="window.location.href='/index.html'" class="bg-gray-400 text-gray-800 block w-full mt-5 p-2 text-xl  font-medium rounded-xl"
+    <button onclick="window.location.href='./index.html'" class="bg-gray-400 text-gray-800 block w-full mt-5 p-2 text-xl  font-medium rounded-xl hover:bg-gray-500"
     >Back to Home</button>
     `;
     sectionEl.classList.add("hidden");
@@ -201,7 +201,6 @@ convertBtnEL.addEventListener("click", async () => {
     console.log(err.message);
   }
   formEl.reset();
- 
 });
 
 backBtnEl.addEventListener("click", () => {
