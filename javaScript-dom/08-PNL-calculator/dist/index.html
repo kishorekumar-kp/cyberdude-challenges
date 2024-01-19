@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PNL calculator</title>
+    <script type="module" crossorigin src="./assets/index-733H1A-c.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-LQw9zAzQ.css">
+  </head>
+  <body class="bg-darkblue font-Montserrat">
+    <div class="text-3xl text-center font-bold p-7 text-whiteblue">
+      <h1>Trading PNL Calculator</h1>
+    </div>
+    <div class="">
+      <form
+        action=""
+        class="text-whiteblue bg-tealblue max-w-3xl m-auto p-10 border-2 border-mintblue"
+      >
+        <div class="flex justify-around">
+          <div class="flex flex-col p-2">
+            <label for="margin" class="text-lg font-medium p-1">Margin:</label>
+            <input
+              type="number"
+              id="margin"
+              name="margin"
+              placeholder="Enter Margin Price"
+              class="text-gray-800 font-semibold text-lg placeholder-gray-500 bg-mintblue border-2 border-darkblue rounded-xl px-5 py-1.5"
+              required
+            />
+          </div>
+          <div class="p-2">
+            <div class="flex flex-col">
+              <label for="leverage" class="text-lg font-medium p-1"
+                >Adjust Leverage:</label
+              >
+              <input
+                type="range"
+                id="leverage"
+                name="leverage"
+                list="values"
+                min="1"
+                max="5"
+                class="w-64 m-0"
+                required
+              />
+            </div>
+            <datalist id="values" class="flex justify-between w-64 px-1">
+              <option class="p-0" value="1" label="1X"></option>
+              <option class="p-0" value="2" label="2X"></option>
+              <option class="p-0" value="3" label="3X"></option>
+              <option class="p-0" value="4" label="4X"></option>
+              <option class="p-0" value="5" label="5X"></option>
+            </datalist>
+          </div>
+        </div>
+        <div class="flex justify-around">
+          <div class="flex flex-col p-2">
+            <label for="entryPrice" class="text-lg font-medium p-1"
+              >Entry Price :</label
+            >
+            <input
+              type="number"
+              id="entryPrice"
+              name="entryPrice"
+              placeholder="Enter Price of Entry"
+              class="text-gray-800 font-semibold text-lg placeholder-gray-500 bg-mintblue border-2 border-darkblue rounded-xl px-5 py-1.5"
+              required
+            />
+          </div>
+          <div class="flex flex-col p-2">
+            <label for="exitPrice" class="text-lg font-medium p-1"
+              >Exit Price :</label
+            >
+            <input
+              type="number"
+              id="exitPrice"
+              name="exitPrice"
+              placeholder="Enter Price of Exit"
+              class="text-gray-800 font-semibold text-lg placeholder-gray-500 bg-mintblue border-2 border-darkblue rounded-xl px-5 py-1.5"
+              required
+            />
+          </div>
+        </div>
+        <div class="flex items-center justify-center px-10 py-5 mt-5">
+          <button
+            class="text-xl bg-darkblue p-2 rounded-xl w-full hover:bg-teal-950"
+          >
+            Calculate
+          </button>
+        </div>
+      </form>
+      <section
+        class="text-whiteblue bg-tealblue max-w-3xl m-auto p-10 border-2 border-mintblue hidden"
+      >
+        <div class="text-xl text-center font-bold p-2 text-whiteblue">
+          <h1 class="p-2 underline">Calculated PNL Data</h1>
+        </div>
+        <div class="text-lg space-y-5 px-20">
+          <p>
+            Margin Amount :
+            <span id="spanMargin" class="font-bold text-xl px-2"></span>
+          </p>
+          <p>
+            Leverage :
+            <span id="spanLeverage" class="font-bold text-xl px-2"></span>
+          </p>
+          <p>
+            Margin Amount after Adding leverage :
+            <span id="spanTotalMargin" class="font-bold text-xl px-2"></span>
+          </p>
+          <p>
+            Total quantity :
+            <span id="spanQuantity" class="font-bold text-xl px-2"></span>
+          </p>
+          <p>
+            Total PNL :
+            <span id="spanPnl" class="font-bold text-xl px-2"></span>
+          </p>
+        </div>
+
+        <h1 class="px-20 text-xl text-darkblue font-semibold py-5 mt-5">
+          covert your PNL Amount into Your Native Currency
+        </h1>
+        <div class="px-20 py-5 space-x-5">
+          <label for="pnl" class="text-xl font-semibold">Your PNL in USD</label>
+          <input
+            type="text"
+            id="pnlUiInput"
+            class="w-24 p-2 text-lg rounded-lg text-center text-gray-800 bg-mintblue border-2 font-semibold border-darkblue"
+            value=""
+            disabled
+          />
+          <select
+            id="currencylist"
+            required
+            class="w-32 py-2 px-1.5 text-lg rounded-lg text-center text-gray-800 bg-mintblue border-2 font-semibold border-darkblue"
+          >
+            <option value="">--select--</option>
+          </select>
+        </div>
+        <div class="px-20 py-5 flex space-x-10">
+          <button
+            id="backBtn"
+            class="bg-gray-500 text-gray-800 block w-full p-2 text-xl font-medium rounded-xl"
+          >
+            Go Back
+          </button>
+          <button
+            id="covertBtn"
+            class="bg-darkblue block w-full p-2 text-xl rounded-xl font-medium"
+          >
+            convert
+          </button>
+        </div>
+      </section>
+      <div
+        id="output"
+        class="hidden px-20 text-whiteblue bg-tealblue max-w-3xl m-auto p-10 border-2 border-mintblue"
+      ></div>
+    </div>
+
+  </body>
+</html>
