@@ -12,83 +12,94 @@
       <h1>Trading PNL Calculator</h1>
     </div>
     <div class="">
-      <form
-        action=""
-        class="text-whiteblue bg-tealblue max-w-3xl m-auto p-10 border-2 border-mintblue"
-      >
-        <div class="flex justify-around">
-          <div class="flex flex-col p-2">
-            <label for="margin" class="text-lg font-medium p-1">Margin:</label>
-            <input
-              type="number"
-              id="margin"
-              name="margin"
-              placeholder="Enter Margin Price"
-              class="text-gray-800 font-semibold text-lg placeholder-gray-500 bg-mintblue border-2 border-darkblue rounded-xl px-5 py-1.5"
-              required
-            />
-          </div>
-          <div class="p-2">
-            <div class="flex flex-col">
-              <label for="leverage" class="text-lg font-medium p-1"
-                >Adjust Leverage:</label
+      <form action="">
+        <div
+          class="text-whiteblue bg-tealblue max-w-3xl m-auto p-10 border-2 border-mintblue"
+        >
+          <div class="flex justify-around">
+            <div class="flex flex-col p-2">
+              <label for="margin" class="text-lg font-medium p-1"
+                >Margin:</label
               >
               <input
-                type="range"
-                id="leverage"
-                name="leverage"
-                list="values"
-                min="1"
-                max="5"
-                class="w-64 m-0"
+                type="number"
+                id="margin"
+                name="margin"
+                placeholder="Enter Margin Price"
+                class="text-gray-800 font-semibold text-lg placeholder-gray-500 bg-mintblue border-2 border-darkblue rounded-xl px-5 py-1.5"
                 required
               />
             </div>
-            <datalist id="values" class="flex justify-between w-64 px-1">
-              <option class="p-0" value="1" label="1X"></option>
-              <option class="p-0" value="2" label="2X"></option>
-              <option class="p-0" value="3" label="3X"></option>
-              <option class="p-0" value="4" label="4X"></option>
-              <option class="p-0" value="5" label="5X"></option>
-            </datalist>
+            <div class="p-2">
+              <div class="flex flex-col">
+                <label for="leverage" class="text-lg font-medium p-1"
+                  >Adjust Leverage:</label
+                >
+                <input
+                  type="range"
+                  id="leverage"
+                  name="leverage"
+                  list="values"
+                  min="1"
+                  max="5"
+                  class="w-64 m-0"
+                  required
+                />
+              </div>
+              <datalist id="values" class="flex justify-between w-64 px-1">
+                <option class="p-0" value="1" label="1X"></option>
+                <option class="p-0" value="2" label="2X"></option>
+                <option class="p-0" value="3" label="3X"></option>
+                <option class="p-0" value="4" label="4X"></option>
+                <option class="p-0" value="5" label="5X"></option>
+              </datalist>
+            </div>
+          </div>
+          <div class="flex justify-around">
+            <div class="flex flex-col p-2">
+              <label for="entryPrice" class="text-lg font-medium p-1"
+                >Entry Price :</label
+              >
+              <input
+                type="number"
+                id="entryPrice"
+                name="entryPrice"
+                placeholder="Enter Price of Entry"
+                class="text-gray-800 font-semibold text-lg placeholder-gray-500 bg-mintblue border-2 border-darkblue rounded-xl px-5 py-1.5"
+                required
+              />
+            </div>
+            <div class="flex flex-col p-2">
+              <label for="exitPrice" class="text-lg font-medium p-1"
+                >Exit Price :</label
+              >
+              <input
+                type="number"
+                id="exitPrice"
+                name="exitPrice"
+                placeholder="Enter Price of Exit"
+                class="text-gray-800 font-semibold text-lg placeholder-gray-500 bg-mintblue border-2 border-darkblue rounded-xl px-5 py-1.5"
+                required
+              />
+            </div>
+          </div>
+          <div class="flex items-center justify-center px-10 py-5 mt-5">
+            <button
+              class="text-xl bg-darkblue p-2 rounded-xl w-full hover:bg-teal-950"
+            >
+              Calculate
+            </button>
           </div>
         </div>
-        <div class="flex justify-around">
-          <div class="flex flex-col p-2">
-            <label for="entryPrice" class="text-lg font-medium p-1"
-              >Entry Price :</label
-            >
-            <input
-              type="number"
-              id="entryPrice"
-              name="entryPrice"
-              placeholder="Enter Price of Entry"
-              class="text-gray-800 font-semibold text-lg placeholder-gray-500 bg-mintblue border-2 border-darkblue rounded-xl px-5 py-1.5"
-              required
-            />
-          </div>
-          <div class="flex flex-col p-2">
-            <label for="exitPrice" class="text-lg font-medium p-1"
-              >Exit Price :</label
-            >
-            <input
-              type="number"
-              id="exitPrice"
-              name="exitPrice"
-              placeholder="Enter Price of Exit"
-              class="text-gray-800 font-semibold text-lg placeholder-gray-500 bg-mintblue border-2 border-darkblue rounded-xl px-5 py-1.5"
-              required
-            />
-          </div>
-        </div>
-        <div class="flex items-center justify-center px-10 py-5 mt-5">
-          <button
-            class="text-xl bg-darkblue p-2 rounded-xl w-full hover:bg-teal-950"
-          >
-            Calculate
-          </button>
+        <div class="text-whiteblue  max-w-3xl m-auto p-10 ">
+          <p>* Margin - Margin refers to the money in your capital.</p>
+          <p>* Leverage - Leverage allows you to multiply your capital,to trade with larger amounts.</p>
+          <p>* Entry Price - The Entry Price is the price at which you enter a trade.</p>
+          <p>* Exit Price - The Exit Price is the price at which you close or exit a trade.</p>
+  
         </div>
       </form>
+     
       <section
         class="text-whiteblue bg-tealblue max-w-3xl m-auto p-10 border-2 border-mintblue hidden"
       >
