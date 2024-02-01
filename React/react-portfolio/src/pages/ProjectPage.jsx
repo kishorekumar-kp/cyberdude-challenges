@@ -11,7 +11,7 @@ function ProjectPage() {
         </h1>
         <div className="grid grid-cols-3 gap-5">
           <div className="space-y-1 bg-dark text-white p-2">
-            <p className="text-center  font-medium">CSS-Flex box </p>
+            <p className="text-center  font-medium">CSS-Flex box</p>
             <img
               className="h-64 w-80 p-3"
               src="https://github.com/kishorekumar-kp/css-flexbox/raw/main/assets/preview.png"
