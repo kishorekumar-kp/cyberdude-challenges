@@ -37,7 +37,7 @@ function ProjectPage() {
           </div>
 
           <div className="space-y-1 bg-dark text-white p-2">
-            <p className="text-center  font-medium">Movie-Flex </p>
+            <p className="text-center  font-medium">Movie-Flex</p>
             <img
               className="h-64 w-80 p-3"
               src={movie}

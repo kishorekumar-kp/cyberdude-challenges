@@ -39,7 +39,6 @@ const HomePage = () => {
             <h2 className="text-xl font-semibold py-2">About Me</h2>
             <h3 className="text-lg">MY STORY</h3>
             <p className="py-2">
-              {" "}
               As developers, we are constructing new things every day. Each line
               of code is another building block. .We might be adding new
               features or solving bugs every day.
@@ -48,7 +47,7 @@ const HomePage = () => {
             <p className="py-2">
               I am a undergraduate student with 7.0 CGPA in department of
               Mechanical Engineering. And Enter the practical world in after
-              May-2020 with full of hope and some technical skill{" "}
+              May-2020 with full of hope and some technical skill
             </p>
           </div>
         </div>
