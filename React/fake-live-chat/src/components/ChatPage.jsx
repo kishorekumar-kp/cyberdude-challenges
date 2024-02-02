@@ -36,7 +36,7 @@ const ChatPage = () => {
           <h1 className="text-2xl font-semibold  text-center">
             Fake-Live-chat
           </h1>
-          <a href="">
+          <a href="https://github.com/kishorekumar-kp"  rel="noreferrer" target="_blank">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="32"
@@ -175,7 +175,7 @@ const ChatPage = () => {
                   className="w-12 h-12 rounded-full"
                 />
                 <div className="flex flex-col ">
-                  <p className="text-left text-sm">{name}</p>
+                  <p className="text-left text-sm">{name ? name : "Spider Man"}</p>
                   <p className="text-left text-xs">online</p>
                 </div>
               </div>
@@ -232,8 +232,8 @@ const ChatPage = () => {
               <p className="text-center p-1 text-sm w-24 rounded-2xl mx-auto bg-red-100">{date}</p>
               </div>
               <div className="flex flex-col px-5 py-2 space-y-5">
-              <div  className="mr-12 h-20 bg-white text-gray-700 justify-start">{message1}</div>
-              <div  className="ml-12 h-20  bg-white text-gray-700 justify-end">{message2}</div>
+              <div  className="mr-12 h-20 bg-white text-gray-700 justify-start">{message1 ? message1 : "Type your message"}</div>
+              <div  className="ml-12 h-20  bg-white text-gray-700 justify-end">{message2 ? message2 : "Type your message"}</div>
 
               </div>
               
