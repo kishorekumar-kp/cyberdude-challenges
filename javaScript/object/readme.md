@@ -1,11 +1,29 @@
-# js object with crud operations
+# Javascript Challenge
+
 This challenge is part of free internship (Fullstack Engineer) offered by [CyberDude Networks Pvt. Ltd.](https://cyberdudenetworks.com) You can find all the source code and live links below.
 
-> Task #2: Create a object about ur self with all datatype values. And try to manipulate it.
+## Object
 
+The concept is, to generate details of my data
 
-js
-// Paste your code here
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+</head>
+<body>
+    <script type="text/javascript" src="main.js" > </script>
+</body>
+</html>
+```
+
+## Javascript Code
+
+```javascript
+//Create a object about ur self with all datatype values. And try to manipulate it.
 
 let mine = {
   firstName: "kishore",
@@ -61,10 +79,6 @@ let mine = {
 // console.log(mine);
 
 // mine.greet();
+```
 
-
-
-
-## Acknowledgement:
- - Any person who have helped you achieve this challenge. Mention them here. For example, look below.
 
