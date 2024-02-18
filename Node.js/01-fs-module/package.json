@@ -1,0 +1,15 @@
+{
+  "name": "01-fs-module",
+  "version": "1.0.0",
+  "description": "In this task we make all the data can stored in separate folder",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "fs-module",
+    "district-spots"
+  ],
+  "author": "kishorekumar-kp",
+  "license": "ISC"
+}

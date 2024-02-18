@@ -1,11 +1,11 @@
-import ItemsCard from "./components/ItemsCard"
 import TheNavbar from "./components/TheNavbar"
+import HomePage from "./pages/HomePage"
 
 const App = () => {
   return (
     <div>
         <TheNavbar/>
-        <ItemsCard/>
+        <HomePage/>
     </div>
   )
 }

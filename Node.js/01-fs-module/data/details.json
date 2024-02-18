@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "district": "Trichy",
+    "spots": [
+      {
+        "area": "Kallanai Dam",
+        "desc": "Kallanai Dam, which is also known as the Grand Anicut, is an ancient dam built across the Kaveri River, located at a distance of 15 kms from Tiruchirapalli"
+      },
+      {
+        "area": "Rockfort Ganapathi Temple",
+        "desc": "By far the most popular place in all of Trichy is the Rockfort Ganpathi Temple. It derives its name from it's unique building style. The temple structure comprises a huge rock, which is believed to be the oldest rock in the world"
+      },
+      {
+        "area": "Pulliyancholai Water Falls",
+        "desc": "Puliyancholai Waterfalls are situated at the base of Kolli Hills in Tiruchi. The mesmerizing waterfalls are a popular site of tourism and receives a huge influx of visitors"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "district": "Thanjavur",
+    "spots": [
+      {
+        "area": "Brihadeeswara Temple",
+        "desc": "The biggest attraction of Thanjavur - The Brihadeeswara Temple, also known as the Big Temple. Built during the reign of the Great Chola emperor, Raja Raja Chola, this temple is an architectural marvel."
+      },
+      {
+        "area": "Vijayanagar Fort",
+        "desc": "Vijayanagar Fort is a famous tourist spot is located nearly 2 km from the Brahadeeswara temple. This majestic fort was built by Nayaks and partly by Maratha rulers during the early 1550 AD."
+      },
+      {
+        "area": "Gangaikonda Cholapuram",
+        "desc": "The magnificence of the Gangaikonda Cholapuram along with Brihadishwara temple will enchant you and thrill you with its history and engineering"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "district": "Pondicherry",
+    "spots": [
+      {
+        "area": "Paradise Beach",
+        "desc": "Paradise Beach, also known as Plage Paradiso, is situated in Chunnambar, close to Pondicherry town. Adorned with the golden sand, this is a little-isolated beach. To reach here, you have to take a ferry across the backwaters, which takes around 20-30 minutes."
+      },
+      {
+        "area": "Auroville",
+        "desc": "Auroville is one of those towns which appear to come to life right out of fiction. In the union territory of Pondicherry, this township runs on the principles of peace, harmony, sustainable living and 'divine consciousness' which was the philosophy of the Mother of Sri Aurobindo Society, Mirra Alfassa."
+      },
+      {
+        "area": "scuba diving in pondy",
+        "desc": "Packed with enchanting marine life, Pondicherry offers an amazing adventure of scuba diving off the country's East Coast. A dive into the sea will let you explore the rich life comprising of beautiful natural coral reefs and other exotic creatures such as manta rays, kingfish, sea snakes, lionfish, butterflies, crustaceans, moray eels and many more."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "district": "Cuddalore",
+    "spots": [
+      {
+        "area": "Chidambaram",
+        "desc": "In Tamil Nadu, India's Cuddalore district, there is a charming town called Chidambaram. It is known for its ancient temple complex dedicated to Lord Nataraja, the Hindu god of dance. The Chidambaram temple is a significant landmark and a popular tourist destination in the town. The temple's architecture is breathtaking and boasts intricate carvings and beautiful artwork."
+      },
+      {
+        "area": "Pichavaram Mangrove Forest",
+        "desc": "Pichavaram Mangrove Forest, located in the coastal town of Cuddalore in the southern state of Tamil Nadu, is a unique and ecologically significant tourist destination. It is one of the largest mangrove forests in the world, covering an area of around 1,100 hectares, and is known for its complex network of waterways, canals, and channels that crisscross through the dense mangrove trees. Visitors can explore the forest by boat, taking in the breathtaking scenery and observing the rich and diverse ecosystem in this environment."
+      },
+      {
+        "area": "Silver Beach",
+        "desc": "Silver Beach is a beautiful and serene tourist destination in Cuddalore, Tamil Nadu, India. t is well-known for having crystal-clear blue seas and fine golden sand, making it a favorite destination for visitors and residents. The beach is ideal for those seeking a peaceful and rejuvenating retreat in the lap of nature"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "district": "Coimbatore",
+    "spots": [
+      {
+        "area": "Adiyogi Shiva Statue",
+        "desc": "Surrounded by verdant green farms at the foothills of Velliangiri Mountains in the Western Ghats, Adiyogi Shiva Statue is the world’s biggest bust statue dedicated to the celebrated Hindu deity Shiva, which is carved out of 500 tonnes of steel. "
+      },
+      {
+        "area": "Vydehi water falls",
+        "desc": "The Vydehi water falls is situated some 35 km away from the Coimbatore city. People who pay a visit to Coimbatore must make it a point to visit the Vydehi water falls, as it is one of the most familiar water fall and is highly known for its magnificence."
+      },
+      {
+        "area": "Kodiveri Dam",
+        "desc": "Situated on the Bhavani River near Gobichettipalayam in Tamil Nadu, Kodiveri Dam is a scenic picnic spot and a major tourist attraction in the place. The dam is not only a tourist spot but it also provides irrigation water for over 25000 hectares of land."
+      }
+    ]
+  }
+]
