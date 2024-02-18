@@ -1,6 +1,8 @@
 import { useState } from "react";
-const price = 2000;
-const ItemsCard = () => {
+import propTypes from "prop-types";
+// const price = 2000;
+const ItemsCard = ({brand,type,price,img}) => {
+  console.log(brand,type,price,img);
   const [quantity, setQuantity] = useState(1);
 
   const incrementQuantity = () => {
@@ -26,15 +28,11 @@ const ItemsCard = () => {
     <div>
       <div className="bg-normal mx-auto max-w-52 flex flex-col p-10">
         <div className="flex items-center justify-center">
-          <img
-            src="https://rukminim2.flixcart.com/image/612/612/xif0q/shirt/w/r/g/l-pcb-01-marmic-fab-original-imagwhysn2gsccxf.jpeg?q=70"
-            alt="img"
-            className="w-44 h-52 "
-          />
+          <img src={img} alt="image" className="w-44 h-52 " />
         </div>
         <div className="flex flex-col items-center">
-          <h4 className="m-1">American Eagle</h4>
-          <p className="m-1">Men&apos;s regular fit</p>
+          <h4 className="m-1">{brand}</h4>
+          <p className="m-1">{type}</p>
           <div className="flex">
             <p className="m-1">Price :</p>
             <p className="m-1">₹ {price}</p>
@@ -65,6 +63,13 @@ const ItemsCard = () => {
       </div>
     </div>
   );
+};
+
+ItemsCard.propTypes = {
+  brand: propTypes.string,
+  price: propTypes.number,
+  type: propTypes.string,
+  img: propTypes.string,
 };
 
 export default ItemsCard;
