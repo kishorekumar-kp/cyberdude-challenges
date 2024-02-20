@@ -1,7 +1,7 @@
-import propTypes from "prop-types"
-const InternCard = ({name ,role,gitName ,email}) => {
+import propTypes from "prop-types";
+const InternCard = ({ name, role, gitName, email }) => {
   return (
-    <div className="bg-green-700">
+    <div className="flex items-center justify-center">
       <div className="p-5 bg-beige mt-5 max-w-xs">
         {/* <img
           src="https://avatars.githubusercontent.com/u/107993227?v=4"
@@ -17,12 +17,13 @@ const InternCard = ({name ,role,gitName ,email}) => {
             <p className="text-center ">Social media Connect</p>
             <ul className="flex gap-5 p-3">
               <li>
-                <a href={`mailto:${email}`}>
+                <a href={`mailto:${email}`} target="_blank">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="2rem"
                     height="2rem"
                     viewBox="0 0 24 24"
+                    className="hover:text-beige"
                   >
                     <path
                       fill="currentColor"
@@ -32,12 +33,13 @@ const InternCard = ({name ,role,gitName ,email}) => {
                 </a>
               </li>
               <li>
-                <a href="mailto:your@email.com">
+                <a href="" target="_blank">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="1.8em"
                     height="1.8em"
                     viewBox="0 0 24 24"
+                    className="hover:text-beige"
                   >
                     <path
                       fill="currentColor"
@@ -47,12 +49,13 @@ const InternCard = ({name ,role,gitName ,email}) => {
                 </a>
               </li>
               <li>
-                <a href={`https://github.com/${gitName}`}>
+                <a href={`https://github.com/${gitName}`} target="_blank">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="1.8em"
                     height="1.8em"
                     viewBox="0 0 24 24"
+                    className="hover:text-beige"
                   >
                     <path
                       fill="currentColor"
@@ -62,12 +65,13 @@ const InternCard = ({name ,role,gitName ,email}) => {
                 </a>
               </li>
               <li>
-                <a href="mailto:your@email.com">
+                <a href="mailto:your@email.com" target="_blank">
                   <svg
-                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns=""
                     width="1.8em"
                     height="1.8em"
                     viewBox="0 0 24 24"
+                    className="hover:text-beige"
                   >
                     <path
                       fill="currentColor"
@@ -84,12 +88,11 @@ const InternCard = ({name ,role,gitName ,email}) => {
   );
 };
 
-InternCard.propTypes ={
-    name:propTypes.string,
-    role:propTypes.string,
-    gitName:propTypes.string,
-    email:propTypes.string,
-
-}
+InternCard.propTypes = {
+  name: propTypes.string,
+  role: propTypes.string,
+  gitName: propTypes.string,
+  email: propTypes.string,
+};
 
 export default InternCard;

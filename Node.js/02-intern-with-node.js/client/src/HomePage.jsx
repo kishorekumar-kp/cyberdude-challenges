@@ -1,5 +1,4 @@
 import InternCard from "./components/InternCard";
-// import datas from "./assets/information.json";
 import { useEffect, useState } from "react";
 
 function HomePage() {
@@ -17,7 +16,7 @@ function HomePage() {
   }, []);
 
   return (
-    <div>
+    <div className="grid grid-cols-4 mt-5">
       {internData.map((datas, index) => {
         const { Name, role, gitName, email } = datas;
         return (
@@ -31,8 +30,8 @@ function HomePage() {
           />
         );
       })}
-      {/* {datas.length != 0
-        ? datas.map((intern, index) => {
+      {/* {internData.length != 0
+        ? internData.map((intern, index) => {
             return (
               <InternCard
                 key={index}
