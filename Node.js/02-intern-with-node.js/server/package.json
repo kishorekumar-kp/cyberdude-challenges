@@ -1,0 +1,16 @@
+{
+  "name": "intern-data",
+  "version": "1.0.0",
+  "description": "In this project we create API for Intern data and show it in UI also",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "itern-data",
+    "api",
+    "server-side"
+  ],
+  "author": "kishorekumar-kp",
+  "license": "MIT"
+}
